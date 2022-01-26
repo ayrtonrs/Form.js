@@ -5,8 +5,7 @@ botaoAdicionar.addEventListener("click", function(event){
 
     //criando variavel para adicionar dados ao formulario
     let form = document.querySelector("#form-adiciona")
-    
-    //coletando dados e montando TR
+        //coletando dados e montando TR
     let paciente = obtemPacienteDoFormulario(form)
     let pacienteTr = montaTr(paciente)
 
@@ -26,10 +25,19 @@ botaoAdicionar.addEventListener("click", function(event){
     //inserindo TR dentro do HTML visualmente
     let tabela = document.querySelector("#tabela-pacientes")
     tabela.appendChild(pacienteTr)
+
+    adicionaPacienteNaTabela(paciente)
+
     form.reset()//limpando o formulario após clicar em adicionar
     let mensagensErro = document.querySelector("#mensagens-erro")
     mensagensErro.innerHTML = ""
 })
+
+function adicionaPacienteNaTabela(paciente){ //código disponivel no buscar-paciente.js
+    let pacienteTr = montaTr(paciente)
+    let tabela = document.querySelector("#tabela-pacientes")
+    tabela.appendChild(pacienteTr)
+}
 
 function exibeMensagensDeErro(erros){
     let ul = document.querySelector("#mensagens-erro")
