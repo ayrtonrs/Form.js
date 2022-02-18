@@ -1,3 +1,5 @@
-# Form.js
+# Formulario frontend com calculo de IMC 
 
-To delete a string, double click it
+Para deletar a string, dê duplo clique.
+
+-To delete a string, double click it.-
